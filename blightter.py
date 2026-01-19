@@ -30,7 +30,7 @@ class colors:
      BrightWhite = "\033[48;5;7m  \033[0m"
 
 
-attemps = 0
+
 os.system("clear")
 logo = """
 
@@ -40,24 +40,10 @@ logo = """
 """
 faded_text = fade.fire(logo)
 print(faded_text)
-while attemps < 100:
-	print(f"\r\033[97m╔{'═' * 55}╗\033[0m")
-    print(f"\r\033[100m\033[97m║\033[32m   v.1.0{' ' * 41}\033[97m║\033[0m")
-    print(f"\r\033[100m\033[97m║\033[32m   https://kunkaffa@gmail.com{' ' * 21}\033[97m║\033[0m")
-    print(f"\r\033[97m╚{'═' * 55}╝\033[0m")
-
-    
-    print("\033[32m┏━━KunFayz━━⬣")
-    username = input("\033[32m┗> Enter your username: \033[0m")
-    password = input("\033[32m┗> Enter your password: \033[0m")
-
-    if username == 'admin' and password == 'admin':
-        print("\033[100m \033[31m••> WELOCOME TO ZONA ADMIN HACK \033[0m")
-        break
-    else:
-        print('Incorrect credentials. Check if you have Caps lock on and try again.')
-        attemps += 1
-        continue
+print(f"\033[97m╔{'═' * 55}╗\033[0m")
+print(f"\033[100m\033[97m║\033[32m   v.1.0{' ' * 41}\033[97m║\033[0m")
+print(f"\033[100m\033[97m║\033[32m   https://kunkaffa@gmail.com{' ' * 21}\033[97m║\033[0m")
+print(f"\033[97m╚{'═' * 55}╝\033[0m")
 
 host=''
 headers_useragents=[]
