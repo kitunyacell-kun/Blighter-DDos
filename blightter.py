@@ -98,7 +98,6 @@ def initHeaders():
 def handleStatusCodes(status_code):
 	time.sleep(2)
 	global request_counter
-	print(f"\033[33m "+str(url)+"\033[38;5;1m runing\033[0m")
 	sys.stdout.write("\033[100m \033[40m\r%i Target\033[0m" % request_counter) 
 	print(f"\033[48;5;5m "+str(url)+"\033[38;5;7m runing\033[0m")
 	sys.stdout.flush()
