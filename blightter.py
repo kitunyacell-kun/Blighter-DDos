@@ -173,7 +173,7 @@ def main(argv):
 
 	if args.p:
 		url = args.p
-		for i in range(args.th):
+		for i in range(args.t):
 			t = SendPOSTThread()
 			t.start()
 	
