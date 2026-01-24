@@ -173,9 +173,9 @@ def main(argv):
 
 	if args.p:
 		url = args.p
-		for i in range(args.t):
-			t = SendPOSTThread()
-			t.start()
+		for i in range(args.th):
+			th = SendPOSTThread()
+			th.start()
 	
 	if len(sys.argv)==1:
 		parser.print_help()
