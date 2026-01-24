@@ -167,8 +167,8 @@ def main(argv):
 
 	if args.url:
 		url = args.url
-		for i in range(args.t):
-			t = SendGETThread()
+		for i in range(args.th):
+			th = SendGETThread()
 			t.start()
 
 	if args.p:
