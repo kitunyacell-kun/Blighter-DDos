@@ -169,7 +169,7 @@ def main(argv):
 		url = args.url
 		for i in range(args.th):
 			th = SendGETThread()
-			t.start()
+			th.start()
 
 	if args.p:
 		url = args.p
