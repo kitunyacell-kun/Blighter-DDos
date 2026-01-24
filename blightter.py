@@ -98,8 +98,8 @@ def initHeaders():
 def handleStatusCodes(status_code):
 	time.sleep(2)
 	global request_counter
-	sys.stdout.write("\033[100m \033[40m\r%i Target\033[0m" % request_counter) 
-	print(f"\033[48;5;5m "+str(url)+"\033[38;5;7m runing\033[0m")
+	sys.stdout.write("\033[100m \033[40m\[r%i] Target\033[0m" % request_counter) 
+	print(f"\033[48;5;5m "+str(random)+"\033[38;5;7m runing\033[0m")
 	sys.stdout.flush()
 	if status_code == 429:
 			printMsg("You have been throttled")
@@ -158,7 +158,7 @@ def main(argv):
 	parser.add_argument('-p', help='Specify POST request. Usage: -p \'<url>\'')
 	parser.add_argument('-d', help='Specify data payload for POST request', default=None)
 	parser.add_argument('-ah', help='Specify addtional header/s. Usage: -ah \'Content-type: application/json\' \'User-Agent: Doser\'', default=None, nargs='*')
-	parser.add_argument('-th', help='Specify number of threads to be used', default=500, type=int)
+	parser.add_argument('-t', help='Specify number of threads to be used', default=500, type=int)
 	args = parser.parse_args()
 
 	global url, payload, additionalHeaders
@@ -168,14 +168,14 @@ def main(argv):
 	if args.url:
 		url = args.url
 		for i in range(args.th):
-			th = SendGETThread()
-			th.start()
+			t = SendGETThread()
+			t.start()
 
 	if args.p:
 		url = args.p
 		for i in range(args.th):
-			th = SendPOSTThread()
-			th.start()
+			t = SendPOSTThread()
+			t.start()
 	
 	if len(sys.argv)==1:
 		parser.print_help()
