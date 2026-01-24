@@ -165,8 +165,8 @@ def main(argv):
 	additionalHeaders = args.ah
 	payload = args.d
 
-	if args.g:
-		url = args.g
+	if args.url:
+		url = args.url
 		for i in range(args.t):
 			t = SendGETThread()
 			t.start()
