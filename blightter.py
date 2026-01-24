@@ -154,11 +154,11 @@ class SendPOSTThread(threading.Thread):
 
 def main(argv):
 	parser = argparse.ArgumentParser(description='Sending unlimited amount of requests in order to perform DoS attacks. Written by Barak Tawily')
-	parser.add_argument('-g', help='Specify GET request. Usage: -g \'<url>\'')
+	parser.add_argument('-url', help='Specify GET request. Usage: -url \'<url>\'')
 	parser.add_argument('-p', help='Specify POST request. Usage: -p \'<url>\'')
 	parser.add_argument('-d', help='Specify data payload for POST request', default=None)
 	parser.add_argument('-ah', help='Specify addtional header/s. Usage: -ah \'Content-type: application/json\' \'User-Agent: Doser\'', default=None, nargs='*')
-	parser.add_argument('-t', help='Specify number of threads to be used', default=500, type=int)
+	parser.add_argument('-th', help='Specify number of threads to be used', default=500, type=int)
 	args = parser.parse_args()
 
 	global url, payload, additionalHeaders
